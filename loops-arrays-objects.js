@@ -78,7 +78,7 @@ const employeesInTraining = [
 	 }
  }
 // ==========================================
-console.log('-------------Opdracht 4-------------')
+console.log('-------------Opdracht 4 a-------------');
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
 // naar percentages en toe te voegen aan de administratie. Schrijf een script dat de score van iedere medewerker in de
 // array omzet naar een salarisverhoging-percentage en dit in de terminal print. De percentages zijn als volgt:
@@ -104,8 +104,9 @@ const scores = [
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
 
+let percentage = 0;
  for (let i = 0; i < scores.length; i++){
-	 let percentage = 0;
+
 	 if (scores[i].score < 60) {
 		 percentage = 0;
 	 } else if (scores[i].score === 60 || (scores[i].score < 69 && scores[i].score > 60)) {
@@ -120,6 +121,7 @@ const scores = [
 	 console.log(`${percentage}%`);
  }
 // ==========================================
+console.log('-------------Opdracht 4 b-------------');
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
 
 // Verwachte uitkomst:
@@ -133,7 +135,18 @@ const scores = [
 // 	{name: 'Otis', score: 100, salaryIncrease: '6%'},
 // ];
 // ==========================================
+// Mijn eerste antwoord
+for (let i = 0; i < scores.length; i++){
+	scores[i].salaryIncrease = percentage;
+}
+console.log(scores);
 
+console.log('-------------Separate Solutions-------------') // Scheidingslijn zodat het beter leesbaar is in de console/terminal
+//Mijn tweede antwoord
+for (let i = 0; i < scores.length; i++){
+	scores[i].salaryIncrease = `${percentage}%`;
+}
+console.log(scores);
 
 
 // ==========================================
