@@ -1,5 +1,5 @@
 // ==========================================
-console.log('-------------Opdracht 1-------------')
+console.log('-------------Opdracht 1-------------');
 // Opdracht 1. Het sturen van salaris-mailtjes is voor Bob een tijdrovende klus. Bovendien typt hij met twee vingers,
 // dus tegen de tijd dat hij alle mails verstuurd heeft, zijn al zijn collega's al langs zijn bureau gelopen om te vragen
 // wanneer ze hun salaris kunnen verwachten. Schrijf een script dat voor elke medewerker in de array een salarisbriefje
@@ -55,7 +55,7 @@ for (let i = 0; i < vacationDays.length; i++) {
 }
 
 // ==========================================
-console.log('-------------Opdracht 3-------------')
+console.log('-------------Opdracht 3-------------');
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
 // in de maand januari. Schrijf een script dat de lijst doorloopt en voor iedere medewerker die een opleiding in januari volgt,
 // de naam en de opleiding in de console wordt gelogt.
@@ -150,6 +150,7 @@ console.log(scores);
 
 
 // ==========================================
+console.log('-------------Opdracht 5-------------');
 // Opdracht 5. Bob wil ervoor zorgen dat al zijn medewerkers een correct bedrijfs-e-mailadres hebben. Deze e-mailadressen moeten
 // automatisch worden gegenereerd ("Nee Bob, NIET met de hand!!") in het format: voornaam.achternaam@loop-it-solutions.nl
 // Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
@@ -174,6 +175,13 @@ const employees = [
 	{firstName: 'Otis', lastName: 'Kuiper'},
 ];
 
+let domain = '@loop-it-solutions.nl';
+for (let i = 0; i < employees.length; i++) {
+	let firstName = `${employees[i].firstName}`;
+	let lastName = `${employees[i].lastName}`;
+	employees[i].email = `${firstName}.${lastName}${domain}`;
+}
+console.log(employees);
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
 // Kun je je script aanpassen om dit voor elkaar te krijgen? Dit heb je nog niet geleerd, maar Google is your best friend...
