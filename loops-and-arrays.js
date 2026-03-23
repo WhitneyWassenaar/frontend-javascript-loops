@@ -1,4 +1,5 @@
 // ==========================================
+console.log('-------------Opdracht 1-------------')
 // Opdracht 1. Bob staat erom bekend dat hij vaak vergaderingen mist, omdat hij zijn Outlook-agenda veel "gedoe" vindt.
 // Hij print alles liever uit. Schrijf een script dat onderstaande lijst met vergaderingen doorloopt en voor iedere
 // tijd "Vergadering om [tijd]" in de console logt.
@@ -12,9 +13,12 @@
 // ==========================================
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
-
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log(`Vergadering om ${meetingTimes[i]}`);
+}
 
 // ==========================================
+console.log('-------------Opdracht 2-------------')
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
 // Alle medewerkers hebben daarom zojuist 5% salarisverhoging gekregen. Om te voorkomen dat Bob dit handmatig moet aanpassen,
 // schrijf jij een script voor hem dat alle salarissen in onderstaande array met 5% verhoogd.
@@ -27,8 +31,15 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
 
+let raise = 1;
+
+for (let i = 0; i < salaries.length; i++) {
+    salaries [i] = salaries[i] * 1.05;
+}
+console.log(salaries);
 
 // ==========================================
+console.log('-------------Opdracht 3-------------')
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
 // Daarvoor moet hij natuurlijk wel weten hoe oud iemand is geworden - en hoofdrekenen is niet zijn sterkste kant.
 // Schrijf een script dat de array met geboortedata omzet naar een leeftijd, ervan uitgaande dat het huidige jaar 2025 is.
@@ -38,7 +49,11 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+for (let i = 0; i < birthYears.length; i++) {
+    birthYears[i] = 2025 - birthYears[i];
+}
 
+console.log(birthYears);
 
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
@@ -51,7 +66,14 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
-
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i] % 2 === 0) {
+        leaveHours[i] = leaveHours[i] * 2;
+    } else {
+        leaveHours[i] = leaveHours[i] * 0.5;
+    }
+}
+console.log(leaveHours);
 
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
@@ -68,5 +90,10 @@ const leaveHours = [6, 9, 2, 7, 3];
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
+for (let i = 0; i < productionCodes.length; i++) {
+    productionCodes[i] = productionCodes[i].toUpperCase();
+    productionCodes[i] = productionCodes[i].trim();
+}
 
+console.log(productionCodes);
 
