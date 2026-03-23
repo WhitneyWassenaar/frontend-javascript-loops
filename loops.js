@@ -104,6 +104,7 @@ for (let i = 9; i < 19; i++) {
 }
 
 // ==========================================
+console.log('-------------Opdracht 5-------------')
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
 // Echter, vanaf het getal 3 komt er een > voor ieder getal te staan, en vanaf het getal 6 komt er >> voor ieder getal te staan.
 // Verwachte uitkomsten:
@@ -118,7 +119,29 @@ for (let i = 9; i < 19; i++) {
 // >> 8
 // >> 9
 // ==========================================
+// Mijn eerste antwoord
+for (let i = 0; i < 10; i++) {
+    let symbol = '';
+    if ((i === 3 || i > 3) && i < 6) {
+        symbol = '>';
+    } else if (i === 6 || i > 6) {
+        symbol = '>>';
+    }
+    console.log(`${symbol} i`);
+}
+console.log('-------------Separate Solutions-------------') // Scheidingslijn zodat het beter leesbaar is in de console/terminal
+//Mijn tweede antwoord
+for (let i = 0; i < 10; i++) {
 
+    let symbol = '';
+
+    if ((i === 3 || i > 3) && (i < 6)) {
+        symbol = '>';
+    } else if (i === 6 || i > 6) {
+        symbol = '>'.repeat(2);
+    }
+    console.log(`${symbol} ${i}`);
+}
 
 // ==========================================
 // Opdracht 6 (BONUS). Schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -157,6 +180,20 @@ for (let i = 9; i < 19; i++) {
 // FizzBuzz
 // etc.
 // ==========================================
+for (let i = 1; i < 101; i++) {
 
+    let funnyWord = '';
+
+    if ((i % 3 === 0) && (i % 5 === 0))  { // Deze if-statement moet als eerste gecheckt worden, want als je bijvoorbeeld de if-statement voor 'Fizz' eerst zou checken dan kijkt het programma niet meer naar de rest
+        funnyWord = 'FizzBuzz';
+    } else if (i % 5 === 0) {
+        funnyWord = 'Buzz';
+    } else if (i % 3 === 0) {
+        funnyWord = 'Fizz';
+    } else {
+        funnyWord = i;
+    }
+    console.log(funnyWord);
+}
 
 
