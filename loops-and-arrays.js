@@ -66,7 +66,14 @@ console.log(birthYears);
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
-
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i] % 2 === 0) {
+        leaveHours[i] = leaveHours[i] * 2;
+    } else {
+        leaveHours[i] = leaveHours[i] * 0.5;
+    }
+}
+console.log(leaveHours);
 
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
