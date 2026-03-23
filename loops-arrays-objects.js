@@ -179,12 +179,12 @@ let domain = '@loop-it-solutions.nl';
 for (let i = 0; i < employees.length; i++) {
 	let firstName = `${employees[i].firstName}`;
 	let lastName = `${employees[i].lastName}`;
-	employees[i].email = `${firstName}.${lastName}${domain}`;
+	employees[i].email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${domain.toLowerCase()}`;
 }
 console.log(employees);
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
 // Kun je je script aanpassen om dit voor elkaar te krijgen? Dit heb je nog niet geleerd, maar Google is your best friend...
 // ==========================================
-
+// toLowerCase() toegevoegd bij firstName, lastName en domain in opdracht 5
 
