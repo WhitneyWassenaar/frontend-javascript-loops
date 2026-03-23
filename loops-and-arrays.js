@@ -12,7 +12,9 @@
 // ==========================================
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
-
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log(`Vergadering om ${meetingTimes[i]}`);
+}
 
 // ==========================================
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
