@@ -56,6 +56,7 @@ for (let i = 0; i < birthYears.length; i++) {
 console.log(birthYears);
 
 // ==========================================
+console.log('-------------Opdracht 4-------------')
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
 // - Even getallen (bijvoorbeeld 2, 4, 6 uur) worden vermenigvuldigd met 2, omdat medewerkers die hun verlof in nette blokken opnemen, worden beloond.
 // - Oneven getallen (bijvoorbeeld 3, 5, 7 uur) worden vermenigvuldigd met 0.5, omdat Bob onregelmatig verlof wil ontmoedigen
@@ -76,6 +77,7 @@ for (let i = 0; i < leaveHours.length; i++) {
 console.log(leaveHours);
 
 // ==========================================
+console.log('-------------Opdracht 5 bonus-------------')
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
 // productiecodes verkeerd genereert en Bob deze altijd met de hand verbetert. Geen wonder dat er zo weinig werk verzet wordt...
 // Elke code bevat onnodige spaties en rare hoofdletters. Schrijf een script dat de codes in één keer corrigeert.
