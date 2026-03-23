@@ -55,6 +55,7 @@ for (let i = 0; i < vacationDays.length; i++) {
 }
 
 // ==========================================
+console.log('-------------Opdracht 3-------------')
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
 // in de maand januari. Schrijf een script dat de lijst doorloopt en voor iedere medewerker die een opleiding in januari volgt,
 // de naam en de opleiding in de console wordt gelogt.
@@ -71,7 +72,11 @@ const employeesInTraining = [
 	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
 	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
-
+ for (let i = 0; i < employeesInTraining.length; i++) {
+	 if (employeesInTraining[i].month === 'Januari') {
+		 console.log(`${employeesInTraining[i].name}: ${employeesInTraining[i].training}`);
+	 }
+ }
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
 // naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
