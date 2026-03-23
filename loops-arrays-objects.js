@@ -78,8 +78,9 @@ const employeesInTraining = [
 	 }
  }
 // ==========================================
+console.log('-------------Opdracht 4-------------')
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
-// naar percentages en toe te voegen aan de adminstratie. Schrijf een script dat de score van iedere medewerker in de
+// naar percentages en toe te voegen aan de administratie. Schrijf een script dat de score van iedere medewerker in de
 // array omzet naar een salarisverhoging-percentage en dit in de terminal print. De percentages zijn als volgt:
 // - minder dan 60 = 0%
 // - 60 tot 69 = 2%
@@ -103,6 +104,21 @@ const scores = [
 	{name: 'Otis', score: 100, salaryIncrease: null},
 ];
 
+ for (let i = 0; i < scores.length; i++){
+	 let percentage = 0;
+	 if (scores[i].score < 60) {
+		 percentage = 0;
+	 } else if (scores[i].score === 60 || (scores[i].score < 69 && scores[i].score > 60)) {
+		 percentage = 2;
+	 } else if (scores[i].score === 70 || (scores[i].score < 89 && scores[i].score > 70)) {
+		 percentage = 3;
+	 } else if (scores[i].score === 90 || (scores[i].score < 99 && scores[i].score > 90)) {
+		 percentage = 4;
+	 } else {
+		 percentage = 6;
+	 }
+	 console.log(`${percentage}%`);
+ }
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
 
