@@ -51,7 +51,7 @@ const vacationDays = [
 ];
 for (let i = 0; i < vacationDays.length; i++) {
 	let availableVacationDays = vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays;
-	console.log(`${vacationDays[i].name} heeft nog ${availableVacationDays} vakantiedagen over.`)
+	console.log(`${vacationDays[i].name} heeft nog ${availableVacationDays} vakantiedagen over.`);
 }
 
 // ==========================================
