@@ -39,7 +39,7 @@ for (let i = 0; i < salaries.length; i++) {
 console.log(salaries);
 
 // ==========================================
-console.log('-------------Opdracht 2-------------')
+console.log('-------------Opdracht 3-------------')
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
 // Daarvoor moet hij natuurlijk wel weten hoe oud iemand is geworden - en hoofdrekenen is niet zijn sterkste kant.
 // Schrijf een script dat de array met geboortedata omzet naar een leeftijd, ervan uitgaande dat het huidige jaar 2025 is.
@@ -49,7 +49,11 @@ console.log('-------------Opdracht 2-------------')
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+for (let i = 0; i < birthYears.length; i++) {
+    birthYears[i] = 2025 - birthYears[i];
+}
 
+console.log(birthYears);
 
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
