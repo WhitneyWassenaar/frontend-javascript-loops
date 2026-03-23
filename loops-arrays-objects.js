@@ -25,10 +25,11 @@ const salaryDetails = [
 ];
 
 for (let i = 0; i < salaryDetails.length; i++) {
-	console.log(`Beste ${salaryDetails[i].name}, je salaris van €${salaryDetails[i].salary},- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.`)
+	console.log(`Beste ${salaryDetails[i].name}, je salaris van €${salaryDetails[i].salary},- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.`);
 }
 
 // ==========================================
+console.log('-------------Opdracht 2-------------')
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
 // voldoende vrije dagen over heeft voor de aanvraag. En dat gaat nog wel eens mis... Zorg ervoor dat het aantal vakantiedagen
 // dat iedere medewerker nog op kan nemen, in de terminal wordt geprint
@@ -48,7 +49,10 @@ const vacationDays = [
 	{name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
 	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
-
+for (let i = 0; i < vacationDays.length; i++) {
+	let availableVacationDays = vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays;
+	console.log(`${vacationDays[i].name} heeft nog ${availableVacationDays} vakantiedagen over.`)
+}
 
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
