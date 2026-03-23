@@ -1,4 +1,5 @@
 // ==========================================
+console.log('-------------Opdracht 1-------------')
 // Opdracht 1. Maak een for loop die het volgende patroon in de terminal print:
 // Verwachte uitkomsten:
 // *
@@ -9,10 +10,11 @@
 
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen... Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
-for (let i = 0; i < 6; i++) {
+for (let i = 1; i < 6; i++) {
     console.log('*'.repeat(i));
 }
 // ==========================================
+console.log('-------------Opdracht 2-------------')
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
 // Verwachte uitkomsten:
 // loop...
@@ -21,9 +23,16 @@ for (let i = 0; i < 6; i++) {
 // loop...
 // klaar!
 // ==========================================
-
+for (let i = 0; i < 5; i++) {
+    if (i === 4) {
+        console.log(`Klaar!`)
+    } else {
+        console.log(`loop...`)
+    }
+}
 
 // ==========================================
+console.log('-------------Opdracht 3-------------')
 // Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint bij nummer 1 en dat de nummers oplopen. Er zijn in totaal 8 factuurnummers nodig.
 
 // Verwachte uitkomst:
@@ -37,8 +46,31 @@ for (let i = 0; i < 6; i++) {
 // 'INV-0008'
 
 // ==========================================
+// Mijn eerste antwoord (Niet zo handig omdat, als het getal groter wordt dan 100 of zelfs 1000 dan wordt het getal erachter geplakt en heb je een factuurnummer met veel getallen dan zou moeten. Ik houd dit antwoord wel even erin zodat ik het kan teruglezen.)
+for (let i = 1; i < 9; i++) {
+    console.log(`INV-000${i}`);
+}
 
+console.log('-------------Separate Solutions-------------') // Scheidingslijn zodat het beter leesbaar is in de console/terminal
+
+// Mijn tweede antwoord
+for (let i = 1; i < 9; i++) {
+
+   let factuurNummer;
+
+   if (i < 10) {
+       factuurNummer = '000' + i;
+   } else if (i > 10) {
+       factuurNummer = '00' + i;
+   } else if (i > 100) {
+       factuurNummer = '0' + i;
+   } else {
+       factuurNummer = i;
+   }
+   console.log(`INV-${factuurNummer}`)
+}
 // ==========================================
+console.log('-------------Opdracht 4-------------')
 // Opdracht 4. Schrijf een for-loop die van 9 tot en met 18 loopt en de uren logt.
 // - Bij 10:00 en 14:00 moet de tekst "Koffiepauze!" toegevoegd worden
 // - Bij 12:00 moet de tekst "Lunchpauze!" toegevoegd worden
@@ -56,7 +88,20 @@ for (let i = 0; i < 6; i++) {
 // 17:00 Bijna klaar...
 // 18:00
 // ==========================================
+for (let i = 9; i < 19; i++) {
 
+    let status = ''
+
+    if (i === 10 || i === 14) {
+        status = 'Koffiepauze!'
+    } else if (i === 12) {
+        status = 'Lunchpauze!'
+    } else if (i === 17) {
+        status = 'Bijna klaar...'
+    }
+// Geen else nodig want de variabele staat default al als lege string.
+    console.log(`${i}:00 ${status}`)
+}
 
 // ==========================================
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
