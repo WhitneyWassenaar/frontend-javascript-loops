@@ -1,4 +1,5 @@
 // ==========================================
+console.log('-------------Opdracht 1-------------')
 // Opdracht 1. Het sturen van salaris-mailtjes is voor Bob een tijdrovende klus. Bovendien typt hij met twee vingers,
 // dus tegen de tijd dat hij alle mails verstuurd heeft, zijn al zijn collega's al langs zijn bureau gelopen om te vragen
 // wanneer ze hun salaris kunnen verwachten. Schrijf een script dat voor elke medewerker in de array een salarisbriefje
@@ -22,6 +23,10 @@ const salaryDetails = [
 	{name: 'Nina', salary: 3500},
 	{name: 'Otis', salary: 2800}
 ];
+
+for (let i = 0; i < salaryDetails.length; i++) {
+	console.log(`Beste ${salaryDetails[i].name}, je salaris van €${salaryDetails[i].salary},- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.`)
+}
 
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
